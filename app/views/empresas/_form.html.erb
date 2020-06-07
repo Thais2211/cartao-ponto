@@ -1,0 +1,67 @@
+<%= form_with(model: empresa, local: true) do |form| %>
+  <% if empresa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(empresa.errors.count, "error") %> prohibited this empresa from being saved:</h2>
+
+      <ul>
+        <% empresa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpf_cpnpj %>
+    <%= form.text_field :cpf_cpnpj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :razao_social %>
+    <%= form.text_field :razao_social %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ramo_atividade %>
+    <%= form.text_field :ramo_atividade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insc_estadual %>
+    <%= form.text_field :insc_estadual %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insc_municipal %>
+    <%= form.text_field :insc_municipal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular %>
+    <%= form.text_field :celular %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :em_uso %>
+    <%= form.check_box :em_uso %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

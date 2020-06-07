@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf cpnpj:</strong>
+  <%= @empresa.cpf_cpnpj %>
+</p>
+
+<p>
+  <strong>Razao social:</strong>
+  <%= @empresa.razao_social %>
+</p>
+
+<p>
+  <strong>Ramo atividade:</strong>
+  <%= @empresa.ramo_atividade %>
+</p>
+
+<p>
+  <strong>Insc estadual:</strong>
+  <%= @empresa.insc_estadual %>
+</p>
+
+<p>
+  <strong>Insc municipal:</strong>
+  <%= @empresa.insc_municipal %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @empresa.telefone %>
+</p>
+
+<p>
+  <strong>Celular:</strong>
+  <%= @empresa.celular %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @empresa.email %>
+</p>
+
+<p>
+  <strong>Em uso:</strong>
+  <%= @empresa.em_uso %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @empresa.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_empresa_path(@empresa) %> |
+<%= link_to 'Back', empresas_path %>

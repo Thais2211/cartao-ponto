@@ -11,5 +11,9 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/Thais2211/cartao-ponto.git",
+  "author": "Thais Mayara <thaismayara.tmsb@gmail.com>",
+  "license": "MIT"
 }
