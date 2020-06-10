@@ -15,3 +15,8 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+//= require jquery/dist/jquery
+//= require bootstrap/dist/js/bootstrap
+//= require jquery-easing/dist/jquery.easing
+//= require sb-admin-2
