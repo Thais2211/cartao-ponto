@@ -7,6 +7,12 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("jquery")
+require('popper.js')
+require("bootstrap/dist/js/bootstrap.bundle")
+
+require('@fortawesome/fontawesome-free/js/all')
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -15,8 +21,5 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-//= require jquery/dist/jquery
-//= require bootstrap/dist/js/bootstrap
-//= require jquery-easing/dist/jquery.easing
+//= require jquery.easing/dist/jquery.easing
 //= require sb-admin-2
