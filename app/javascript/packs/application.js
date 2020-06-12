@@ -10,7 +10,6 @@ require("channels")
 require("jquery")
 require('popper.js')
 require("bootstrap/dist/js/bootstrap.bundle")
-
 require('@fortawesome/fontawesome-free/js/all')
 
 
@@ -21,5 +20,13 @@ require('@fortawesome/fontawesome-free/js/all')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+//= require jquery
+//= require jquery_ujs
 //= require jquery.easing/dist/jquery.easing
+//= require_tree .
 //= require sb-admin-2
+
+$(document).ready(function(){
+  $('#tel_celular').mask("(99) 99999-9999");
+});
