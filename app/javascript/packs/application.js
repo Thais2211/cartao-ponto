@@ -2,15 +2,20 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+//= require jquery/jquery-3.1.1.min.js
+//= require jquery
+//= require jquery_ujs
+//= require jquery.mask
+//= require jquery.easing/dist/jquery.easing
 
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
-require("channels")
-require("jquery")
-require('popper.js')
-require("bootstrap/dist/js/bootstrap.bundle")
-require('@fortawesome/fontawesome-free/js/all')
+import "channels"
+import "jquery"
+import 'popper.js'
+import "bootstrap/dist/js/bootstrap.bundle"
+import '@fortawesome/fontawesome-free/js/all'
 
 
 
@@ -21,12 +26,10 @@ require('@fortawesome/fontawesome-free/js/all')
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-//= require jquery
-//= require jquery_ujs
-//= require jquery.easing/dist/jquery.easing
+
 //= require_tree .
 //= require sb-admin-2
 
 $(document).ready(function(){
-  $('#tel_celular').mask("(99) 99999-9999");
+  
 });

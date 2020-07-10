@@ -814,17 +814,17 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.3.tgz#722b4b639936129307ddbab3a390f6bcacf3e7bc"
   integrity sha512-I01hgqxxnOgOtJTGlq0ZsGJYiTEEiSGVEGQn3vimZSqEP1HqzyFNbzGTq14Xdyeow2yGJjygjoFF1pmtE+SQaw==
 
-"@rails/activestorage@^6.0.0":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-6.0.3.tgz#401d2a28ecb7167cdb5e830ffddaa17c308c31aa"
-  integrity sha512-YdNwyfryHlcKj7Ruix89wZ2aiN3KTYULdW1Y/hNlHJlrY2/PXjT2YBTzZiVd+dcjrwHBsXV2rExdy+Z/lsrlEg==
+"@rails/activestorage@^6.0.3-1":
+  version "6.0.3-1"
+  resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-6.0.3-1.tgz#8b081b2a9fb20ec1facbec2aaf1f5357b581e37d"
+  integrity sha512-6t/28ZVZkwR9BXKrVhz93VM4lOXqECqbnKp1D/ZHbYPGW2O7Wj6myqV/Mu7rmjDyE9BX1l+GCck83nGDgQYZDg==
   dependencies:
     spark-md5 "^3.0.0"
 
-"@rails/ujs@^6.0.0":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.3.tgz#e68a03278e30daea6a110aac5dfa33c60c53055d"
-  integrity sha512-CM9OEvoN9eXkaX7PXEnbsQLULJ97b9rVmwliZbz/iBOERLJ68Rk3ClJe+fQEMKU4CBZfky2lIRnfslOdUs9SLQ==
+"@rails/ujs@^6.0.3-1":
+  version "6.0.3-1"
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.3-1.tgz#7eef443207cc50ac70604216e8bb02f63d97324e"
+  integrity sha512-OjbJo15U5Gn8FGfmJnbnTcE1MyVdtGrEbAXVS0u1/n4th0jWxJX5G5W793Ll85K31/VDr5Pbz4S8hdR0iXsh/g==
 
 "@rails/webpacker@4.2.2":
   version "4.2.2"
@@ -2789,6 +2789,11 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   dependencies:
     homedir-polyfill "^1.0.1"
 
+expose-loader@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/expose-loader/-/expose-loader-0.7.5.tgz#e29ea2d9aeeed3254a3faa1b35f502db9f9c3f6f"
+  integrity sha512-iPowgKUZkTPX5PznYsmifVj9Bob0w2wTHVkt/eYNPSzyebkUgIedmskf/kcfEIWpiWjg3JRjnW+a17XypySMuw==
+
 express@^4.17.1:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
@@ -3965,15 +3970,10 @@ jquery-easing@^0.0.1:
   dependencies:
     jquery "*"
 
-jquery@*, jquery@>=1.7:
+jquery@*, jquery@>=1.7, jquery@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
-
-jquery@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
 js-base64@^2.1.8:
   version "2.5.2"
