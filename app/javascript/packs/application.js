@@ -10,7 +10,7 @@ require("channels")
 require("jquery")
 require('popper.js')
 require("bootstrap/dist/js/bootstrap.bundle")
-
+require("jquery.easing/jquery.easing")
 require('@fortawesome/fontawesome-free/js/all')
 
 
@@ -21,5 +21,5 @@ require('@fortawesome/fontawesome-free/js/all')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-//= require jquery.easing/dist/jquery.easing
+// require jquery.easing/dist/jquery.easing
 //= require sb-admin-2
