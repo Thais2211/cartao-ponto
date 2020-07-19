@@ -1,0 +1,59 @@
+<div id="modal_alterar_empresa" class="modal inmodal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated fadeIn">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <i class="fa fa-key modal-icon"></i>
+        <h4 class="modal-title">Empresa</h4>
+      </div>
+      <form class="form-horizontal" id="form_alterar_empresa">
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="field">
+              <%= label_tag 'Empresa', nil,  class: 'col-sm-2 control-label padding' %>
+              <div class="col-sm-10 padding">
+                <%= select_tag 'trocar_empresa_id', options_for_select(Empresa.empresas_user.collect{ |u| [u.razao_social, u.id] }, :selected=>  (current_empresa.present? ? current_empresa.id : nil)), {:class => "form-control input-sm" } %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-dismiss="modal">Fechar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    $('#btn_alterar_empresa').click(function () {
+        $('#modal_alterar_empresa').modal('show');
+    });
+
+
+    $('#trocar_empresa_id').on('change', function() {
+        $.ajax({
+            url: '/empresas/change_empresa/',
+            data: getFormAlterarEmpresa(),
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            success: function (data) {
+                $('#modal_alterar_empresa').modal('toggle');
+                location.reload();
+            },error: function(){
+                alert('Ocorreu algum erro!')
+            }
+        });
+
+        return false;
+    });
+
+    function getFormAlterarEmpresa(){
+        form = new FormData();
+        form.append('empresa_id', $("#trocar_empresa_id").val());
+        return form;
+    }
+
+</script>
+

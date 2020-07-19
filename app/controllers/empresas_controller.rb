@@ -1,6 +1,6 @@
 class EmpresasController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_empresa, only: [:show, :edit, :update, :destroy]
+  before_action :set_empresa, only: [:show, :edit, :update, :destroy, :change_empresa]
 
   # GET /empresas
   # GET /empresas.json
@@ -25,7 +25,6 @@ class EmpresasController < ApplicationController
   # POST /empresas
   # POST /empresas.json
   def create
-    byebug
     @empresa = Empresa.new(empresa_params)
     @empresa.user = current_user
     
@@ -66,6 +65,14 @@ class EmpresasController < ApplicationController
       format.html { redirect_to empresas_url, notice: 'Empresa was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def change_empresa
+    byebug
+    @empresa.update(em_uso: true)
+    current_empresa.update(em_uso: false)
+    flash[:success] = 'Empresa alterada com sucesso.'
+    render json: @empresa
   end
 
   private

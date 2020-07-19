@@ -4,22 +4,18 @@
     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
   </a>
   <!-- Dropdown - User Information -->
-  <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-    <a class="dropdown-item" href="#">
-      <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-      Perfil
-    </a>
-    <a class="dropdown-item" href="#">
-      <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-      Settings
-    </a>
-    <a class="dropdown-item" href="#">
-      <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-      Activity Log
-    </a>
+  <ul class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+    
+    <li><a id="btn_alterar_empresa" class="dropdown-item"> 
+      <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+      Alterar empresa     </a>
+    </li>
+
     <div class="dropdown-divider"></div>
-    <%= link_to destroy_user_session_path, method: :delete, :class => "dropdown-item" do %>
+
+    <li><%= link_to destroy_user_session_path, method: :delete, :class => "dropdown-item" do %>
       <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Fazer logoff
       <% end %>
-  </div>
+    </li>
+  </ul>
 </li>
