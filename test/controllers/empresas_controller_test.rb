@@ -17,7 +17,7 @@ class EmpresasControllerTest < ActionDispatch::IntegrationTest
 
   test "should create empresa" do
     assert_difference('Empresa.count') do
-      post empresas_url, params: { empresa: { celular: @empresa.celular, cpf_cpnpj: @empresa.cpf_cpnpj, em_uso: @empresa.em_uso, email: @empresa.email, insc_estadual: @empresa.insc_estadual, insc_municipal: @empresa.insc_municipal, ramo_atividade: @empresa.ramo_atividade, razao_social: @empresa.razao_social, telefone: @empresa.telefone, user_id: @empresa.user_id } }
+      post empresas_url, params: { empresa: { celular: @empresa.celular, cpf_cnpj: @empresa.cpf_cnpj, em_uso: @empresa.em_uso, email: @empresa.email, insc_estadual: @empresa.insc_estadual, insc_municipal: @empresa.insc_municipal, ramo_atividade: @empresa.ramo_atividade, razao_social: @empresa.razao_social, telefone: @empresa.telefone, user_id: @empresa.user_id } }
     end
 
     assert_redirected_to empresa_url(Empresa.last)
@@ -34,7 +34,7 @@ class EmpresasControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update empresa" do
-    patch empresa_url(@empresa), params: { empresa: { celular: @empresa.celular, cpf_cpnpj: @empresa.cpf_cpnpj, em_uso: @empresa.em_uso, email: @empresa.email, insc_estadual: @empresa.insc_estadual, insc_municipal: @empresa.insc_municipal, ramo_atividade: @empresa.ramo_atividade, razao_social: @empresa.razao_social, telefone: @empresa.telefone, user_id: @empresa.user_id } }
+    patch empresa_url(@empresa), params: { empresa: { celular: @empresa.celular, cpf_cnpj: @empresa.cpf_cnpj, em_uso: @empresa.em_uso, email: @empresa.email, insc_estadual: @empresa.insc_estadual, insc_municipal: @empresa.insc_municipal, ramo_atividade: @empresa.ramo_atividade, razao_social: @empresa.razao_social, telefone: @empresa.telefone, user_id: @empresa.user_id } }
     assert_redirected_to empresa_url(@empresa)
   end
 

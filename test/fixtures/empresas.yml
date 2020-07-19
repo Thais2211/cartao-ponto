@@ -1,8 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cpf_cpnpj: MyString
-  razao_social: MyString
+  cpf_cnpj: MyString
+  razao_social: Razão social
   ramo_atividade: MyString
   insc_estadual: MyString
   insc_municipal: MyString
@@ -13,7 +13,7 @@ one:
   user: one
 
 two:
-  cpf_cpnpj: MyString
+  cpf_cnpj: MyString
   razao_social: MyString
   ramo_atividade: MyString
   insc_estadual: MyString

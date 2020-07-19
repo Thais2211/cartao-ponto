@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_06_07_230100) do
   enable_extension "plpgsql"
 
   create_table "empresas", force: :cascade do |t|
-    t.string "cpf_cpnpj", null: false
+    t.string "cpf_cnpj", null: false
     t.string "razao_social", null: false
     t.string "ramo_atividade", null: false
     t.string "insc_estadual", null: false

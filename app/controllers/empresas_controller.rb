@@ -25,7 +25,13 @@ class EmpresasController < ApplicationController
   # POST /empresas
   # POST /empresas.json
   def create
+    byebug
     @empresa = Empresa.new(empresa_params)
+    @empresa.user = current_user
+    
+    current_empresa.update(em_uso: false) if (current_empresa.present?) and (@empresa.save)
+    
+    @empresa.em_uso = true
 
     respond_to do |format|
       if @empresa.save
@@ -70,6 +76,6 @@ class EmpresasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def empresa_params
-      params.require(:empresa).permit(:cpf_cpnpj, :razao_social, :ramo_atividade, :insc_estadual, :insc_municipal, :telefone, :celular, :email, :em_uso, :user_id)
+      params.require(:empresa).permit(:cpf_cnpj, :razao_social, :ramo_atividade, :insc_estadual, :insc_municipal, :telefone, :celular, :email, :em_uso, :user_id)
     end
 end

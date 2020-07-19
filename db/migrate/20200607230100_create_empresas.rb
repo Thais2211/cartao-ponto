@@ -1,7 +1,7 @@
 class CreateEmpresas < ActiveRecord::Migration[6.0]
   def change
     create_table :empresas do |t|
-      t.string :cpf_cpnpj, null: false, unique: true
+      t.string :cpf_cnpj, null: false, unique: true
       t.string :razao_social, null: false
       t.string :ramo_atividade, null: false
       t.string :insc_estadual, null: false

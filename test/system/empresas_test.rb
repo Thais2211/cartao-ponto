@@ -15,7 +15,7 @@ class EmpresasTest < ApplicationSystemTestCase
     click_on "New Empresa"
 
     fill_in "Celular", with: @empresa.celular
-    fill_in "Cpf cpnpj", with: @empresa.cpf_cpnpj
+    fill_in "Cpf cnpj", with: @empresa.cpf_cnpj
     check "Em uso" if @empresa.em_uso
     fill_in "Email", with: @empresa.email
     fill_in "Insc estadual", with: @empresa.insc_estadual
@@ -35,7 +35,7 @@ class EmpresasTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Celular", with: @empresa.celular
-    fill_in "Cpf cpnpj", with: @empresa.cpf_cpnpj
+    fill_in "Cpf cpnpj", with: @empresa.cpf_cnpj
     check "Em uso" if @empresa.em_uso
     fill_in "Email", with: @empresa.email
     fill_in "Insc estadual", with: @empresa.insc_estadual
