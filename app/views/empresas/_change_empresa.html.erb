@@ -12,7 +12,7 @@
             <div class="field">
               <%= label_tag 'Empresa', nil,  class: 'col-sm-2 control-label padding' %>
               <div class="col-sm-10 padding">
-                <%= select_tag 'trocar_empresa_id', options_for_select(Empresa.empresas_user.collect{ |u| [u.razao_social, u.id] }, :selected=>  (current_empresa.present? ? current_empresa.id : nil)), {:class => "form-control input-sm" } %>
+                <%= select_tag 'trocar_empresa_id', options_for_select(Empresa.empresas_user.collect{ |u| [u.razao_social, u.id] }), {:class => "form-control input-sm" } %>
               </div>
             </div>
           </div>
